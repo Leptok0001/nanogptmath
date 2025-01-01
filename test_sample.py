@@ -14,14 +14,15 @@ from model import GPTConfig, GPT
 # Config
 # -----------------------------------------------------------------------------
 init_from = 'resume'   # typically 'resume' to load from out/ckpt.pt
-out_dir = 'out'        # where ckpt.pt is located
-problems_file = '/content/nanoGPT/data/math_char/problems.txt'  # path to your q/a file
+out_dir = 'out-math-char'        # where ckpt.pt is located
+problems_file = '/content/nanogptmath/data/math_char/problems.txt'  # path to your q/a file
 
-max_new_tokens = 5     # how many tokens to generate for each question
+max_new_tokens = 3     # how many tokens to generate for each question
 temperature = 0.8
 top_k = 200
 seed = 1337
-device = 'cuda'
+device = 'cpu'
+print("using CPU")
 dtype = ('bfloat16' if torch.cuda.is_available() and torch.cuda.is_bf16_supported()
          else 'float16')
 compile_model = False
