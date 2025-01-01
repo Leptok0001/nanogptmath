@@ -2,17 +2,23 @@
 # nanoGPT trained on 2 digit whole int addition/subtraction
 
 To run in colab free with cpu:
-
+```
 !pip install torch numpy transformers datasets tiktoken wandb tqdm
-
+```
+then:
+```
 !git clone https://github.com/Leptok0001/nanogptmath
 %cd nanogptmath
-
+```
 to continue training for another 1k steps (from model trained to 100k) :
+```
 !python train.py config/train_math_char.py --init_from="resume" --max_iters=101000 --lr_decay_iters=101000 --batch_size=64 --block_size=9 --n_layer=4 --n_head=2 --n_embd=384 --dropout=0.0 --device="cpu"  --compile=False
-
+```
 to test results:
+```
 !python test_sample.py
+```
+
 
 Prev nanoGPT instructions below:
 Because the code is so simple, it is very easy to hack to your needs, train new models from scratch, or finetune pretrained checkpoints (e.g. biggest one currently available as a starting point would be the GPT-2 1.3B model from OpenAI).
