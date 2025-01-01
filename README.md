@@ -1,5 +1,5 @@
 
-# nanoGPT
+# nanoGPT trained on 2 digit whole int addition/subtraction
 
 ![nanoGPT](assets/nanogpt.jpg)
 
