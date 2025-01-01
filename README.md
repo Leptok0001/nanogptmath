@@ -10,13 +10,13 @@ then:
 !git clone https://github.com/Leptok0001/nanogptmath
 %cd nanogptmath
 ```
-to continue training for another 1k steps (from model trained to 100k) :
-```
-!python train.py config/train_math_char.py --init_from="resume" --max_iters=101000 --lr_decay_iters=101000 --batch_size=64 --block_size=9 --n_layer=4 --n_head=2 --n_embd=384 --dropout=0.0 --device="cpu"  --compile=False
-```
-to test results:
+to test results from model trained to 100k:
 ```
 !python test_sample.py
+```
+to continue training for another 1k steps:
+```
+!python train.py config/train_math_char.py --init_from="resume" --max_iters=101000 --lr_decay_iters=101000 --batch_size=64 --block_size=9 --n_layer=4 --n_head=2 --n_embd=384 --dropout=0.0 --device="cpu"  --compile=False
 ```
 
 
