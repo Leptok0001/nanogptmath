@@ -3,7 +3,6 @@
 .ipynb_checkpoints/
 .vscode
 __pycache__/
-*.pkl
 *.pyc
 input.txt
 env/
