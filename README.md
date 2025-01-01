@@ -10,7 +10,7 @@ then:
 !git clone https://github.com/Leptok0001/nanogptmath
 %cd nanogptmath
 ```
-to test results from model trained to 100k:
+to test results from model trained to 100k, takes about 16 min on CPU:
 ```
 !python test_sample.py
 ```
